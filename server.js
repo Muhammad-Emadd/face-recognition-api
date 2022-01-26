@@ -30,14 +30,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-//
-
-db.select("*")
-  .from("users")
-  .then((data) => console.log(data));
-
-//
-
 app.get("/", (req, res) => {});
 
 //
