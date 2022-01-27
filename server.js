@@ -58,8 +58,13 @@ app.put("/image", (req, res) => {
   images.imageHandler(req, res, stub, metadata, db);
 });
 
-let port_number = process.env.PORT || 3000;
-app.listen(port_number);
+app.listen(process.env.PORT || 3000, function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
+});
 
 // let port = process.env.PORT || 8080;
 // app.listen("3000", () => {
