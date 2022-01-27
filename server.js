@@ -65,8 +65,3 @@ app.listen(process.env.PORT || 3000, function () {
     app.settings.env
   );
 });
-
-// let port = process.env.PORT || 8080;
-// app.listen("3000", () => {
-//   console.log("app is runnig and ready to use");
-// });
