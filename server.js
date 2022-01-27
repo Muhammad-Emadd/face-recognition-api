@@ -17,11 +17,10 @@ metadata.set("authorization", "Key 061d2deaae914137b3d986bb4eeb8689");
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    port: 5432,
-    user: "postgres",
-    password: "1003emo100",
-    database: "smart-brain",
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   },
 });
 
