@@ -58,6 +58,10 @@ app.put("/image", (req, res) => {
   images.imageHandler(req, res, stub, metadata, db);
 });
 
-app.listen("3000", () => {
-  console.log("app is runnig and ready to use");
-});
+let port_number = process.env.PORT || 3000;
+app.listen(port_number);
+
+// let port = process.env.PORT || 8080;
+// app.listen("3000", () => {
+//   console.log("app is runnig and ready to use");
+// });
