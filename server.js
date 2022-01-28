@@ -12,7 +12,7 @@ const { ClarifaiStub, grpc } = require("clarifai-nodejs-grpc");
 const stub = ClarifaiStub.grpc();
 
 const metadata = new grpc.Metadata();
-metadata.set("authorization", "Key 061d2deaae914137b3d986bb4eeb8689");
+metadata.set("authorization", process.env.API_KEY);
 
 const db = knex({
   client: "pg",
